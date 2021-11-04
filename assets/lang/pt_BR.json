@@ -1,0 +1,10 @@
+{
+    "title_home": "Conversor de moedas",
+    "brl": "Real",
+    "usd": "Dollar",
+    "eur": "Euro",
+
+    "brl_symbol": "R$",
+    "usd_symbol": "U$",
+    "eur_symbol": "€$"
+}

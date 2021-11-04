@@ -1,0 +1,11 @@
+{
+    "title_home": "Currency Converter",
+    "brl": "BRL",
+    "usd": "USD",
+    "eur": "EUR",
+
+    "brl_symbol": "R$",
+    "usd_symbol": "U$",
+    "eur_symbol": "€$"
+        
+}
