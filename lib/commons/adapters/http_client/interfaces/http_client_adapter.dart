@@ -1,6 +1,6 @@
 import '../http_response.dart';
 
-abstract class HttpClientAdapter {
+abstract class IHttpClientAdapter {
   Future<HttpResponse> get(
     String path, {
     Map<String, dynamic> queryParameters,

@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 
 import '../../erros.dart';
-import 'interfaces/http_client_adapter.dart' as adapter;
+import 'interfaces/http_client_adapter.dart';
 import 'http_response.dart';
 
-class DioAdapter implements adapter.HttpClientAdapter {
+class DioAdapter implements IHttpClientAdapter {
   final Dio dio;
   final List<InterceptorsWrapper> insterceptors;
 

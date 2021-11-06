@@ -20,6 +20,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
+            key: const Key('btnLogoAppBar'),            
             onTap: () {
               Modular.to.pushNamed('/home/about');
             },
@@ -36,18 +37,21 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               radius: 50,
             ),
             CustomTextFieldWidget(
+              key: const Key('txtBrl'),
               labelText: 'brl'.i18n(),
               prefix: 'brl_symbol'.i18n(),
               controller: controller.txtReais,
               onChanged: controller.onRealChanged,
             ),
             CustomTextFieldWidget(
+              key: const Key('txtUsd'),
               labelText: 'usd'.i18n(),
               prefix: 'usd_symbol'.i18n(),
               controller: controller.txtDolars,
               onChanged: controller.onDolarChanged,
             ),
             CustomTextFieldWidget(
+              key: const Key('txtEur'),
               labelText: 'eur'.i18n(),
               prefix: 'eur_symbol'.i18n(),
               controller: controller.txtEuros,

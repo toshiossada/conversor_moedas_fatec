@@ -1,9 +1,7 @@
-import 'package:converssor_moedas/modules/home/domain/enums/currency_type_enum.dart';
-
-import 'package:converssor_moedas/modules/home/domain/entities/currency_entity.dart';
-import 'package:converssor_moedas/modules/home/domain/errors/errors.dart';
-import 'package:converssor_moedas/modules/home/domain/repositories/currency_repository_interface.dart';
-
+import '../entities/currency_entity.dart';
+import '../enums/currency_type_enum.dart';
+import '../errors/errors.dart';
+import '../repositories/currency_repository_interface.dart';
 import 'interfaces/convert_currency_interface.dart';
 
 class ConvertCurrency extends IConvertCurrency {
@@ -18,9 +16,9 @@ class ConvertCurrency extends IConvertCurrency {
     if (value.isEmpty) {
       throw ValueIsNullFailure(message: 'Valor não pode ser vazio');
     } else if (double.tryParse(value) == null) {
-      throw ValueIsNullFailure(message: 'Digite um numero valido');
+      throw InvalidNumberFailure(message: 'Digite um numero valido');
     } else if (double.parse(value) < 0) {
-      throw ValueIsNullFailure(message: 'Valor não pode ser negativo');
+      throw NegativeValueFailure(message: 'Valor não pode ser negativo');
     }
 
     var dValue = double.parse(value);

@@ -28,6 +28,7 @@ dev_dependencies:
   modular_test: ^1.0.1+1
   mobx_codegen: ^2.0.4
   build_runner: ^2.1.4
+  mockito: ^5.0.16
 
 flutter:
   uses-material-design: true

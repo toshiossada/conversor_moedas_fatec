@@ -1,5 +1,6 @@
-import 'package:converssor_moedas/commons/adapters/localization/localization_helper.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../commons/adapters/localization/localization_helper.dart';
 
 class SplashController {
   final LocalizationHelper _localizationHelper;

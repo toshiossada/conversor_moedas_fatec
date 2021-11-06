@@ -1,4 +1,3 @@
-import 'package:converssor_moedas/modules/home/presentation/pages/about/about_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'domain/repositories/currency_repository_interface.dart';
@@ -7,6 +6,7 @@ import 'domain/usecases/interfaces/convert_currency_interface.dart';
 import 'infra/datasources/currency_datasource.dart';
 import 'infra/repositories/currency_repository.dart';
 import 'infra/repositories/datasources/currency_datasource_interface.dart';
+import 'presentation/pages/about/about_page.dart';
 import 'presentation/pages/home/home_controller.dart';
 import 'presentation/pages/home/home_page.dart';
 import 'presentation/pages/home/home_store.dart';

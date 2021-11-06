@@ -1,17 +1,17 @@
-import 'package:converssor_moedas/modules/splash/splash_module.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:dio/dio.dart' as dio;
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'commons/adapters/http_client/dio_adapter.dart';
 import 'commons/adapters/http_client/interceptors/dio_interceptor.dart';
 import 'commons/adapters/http_client/interfaces/http_client_adapter.dart';
 import 'commons/adapters/localization/localization_helper.dart';
 import 'modules/home/home_module.dart';
+import 'modules/splash/splash_module.dart';
 
 class AppModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.factory<HttpClientAdapter>((i) => DioAdapter(
+    Bind.factory<IHttpClientAdapter>((i) => DioAdapter(
           dio: i(),
           insterceptors: [
             i<CustomInterceptors>(),

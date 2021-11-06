@@ -1,14 +1,13 @@
-import 'package:converssor_moedas/commons/adapters/http_client/interfaces/http_client_adapter.dart';
-import 'package:converssor_moedas/commons/erros.dart';
-
+import '../../../../commons/adapters/http_client/interfaces/http_client_adapter.dart';
+import '../../../../commons/erros.dart';
 import '../repositories/datasources/currency_datasource_interface.dart';
 import 'models/currency_info_models.dart';
 
 class CurrencyDataSource implements ICurrencyDataSource {
-  final HttpClientAdapter _httpClient;
+  final IHttpClientAdapter _httpClient;
 
   CurrencyDataSource({
-    required HttpClientAdapter httpClient,
+    required IHttpClientAdapter httpClient,
   }) : _httpClient = httpClient;
 
   @override

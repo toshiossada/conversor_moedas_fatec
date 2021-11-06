@@ -1,4 +1,3 @@
-import 'http_request.dart';
 
 class HttpResponse {
   final dynamic data;

@@ -68,7 +68,5 @@ class CustomInterceptors extends InterceptorsWrapper {
     handler.next(failure);
   }
 
-  String _genToken(String token) {
-    return 'Bearer $token';
-  }
+
 }
