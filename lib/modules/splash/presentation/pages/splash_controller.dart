@@ -15,7 +15,7 @@ class SplashController {
     ]);
 
     Future.delayed(const Duration(seconds: 2), () {
-      Modular.to.pushReplacementNamed('/home');
+      Modular.to.pushReplacementNamed('/home/');
     });
   }
 }
