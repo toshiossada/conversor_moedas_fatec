@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/logo_widget.dart';
-
 class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
 
@@ -14,7 +12,6 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const LogoWidget(),
         title: const Text('Conversor de moedas'),
       ),
       body: Center(

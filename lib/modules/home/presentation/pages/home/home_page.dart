@@ -33,7 +33,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         child: Column(
           children: [
             const CircleAvatar(
-              backgroundImage: AssetImage('assets/images/logo.png'),
+              backgroundImage: AssetImage('assets/images/cifrao.png'),
               radius: 50,
             ),
             CustomTextFieldWidget(
