@@ -25,15 +25,17 @@ void main() {
           Quando a cotação do dolar for de 6 reais e o euro de 8 reais
           Deve retornar 24 reais, 3 euros e 4 dolars
     ''', () async {
-      //prepare
+      // arrange
       when(_repository.getCurrencies())
           .thenAnswer((_) async => const CurrencyInfoEntity(
                 dollarValue: 6,
                 euroValue: 8,
               ));
+      String value = '4';
+      var currency = CurrencyTypeEnum.usd;
 
-      //execute
-      final result = await _usecase('4', CurrencyTypeEnum.usd);
+      // act
+      final result = await _usecase(value, currency);
 
       // assert
       expect(result, isA<CurrencyEntity>());
@@ -48,14 +50,14 @@ void main() {
           Quando a cotação do dolar for de 6 reais e o euro de 8 reais
           Deve retornar 32 reais, 4 euros e 5.333333333333333 dolars
     ''', () async {
-      //prepare
+      //arrange
       when(_repository.getCurrencies())
           .thenAnswer((_) async => const CurrencyInfoEntity(
                 dollarValue: 6,
                 euroValue: 8,
               ));
 
-      //execute
+      //act
       final result = await _usecase('4', CurrencyTypeEnum.eur);
 
       // assert
@@ -71,14 +73,14 @@ void main() {
           Quando a cotação do dolar for de 4 reais e o euro de 8 reais
           Deve retornar 16 reais, 2 euros e 4 dolars
     ''', () async {
-      //prepare
+      //arrange
       when(_repository.getCurrencies())
           .thenAnswer((_) async => const CurrencyInfoEntity(
                 dollarValue: 4,
                 euroValue: 8,
               ));
 
-      //execute
+      //act
       final result = await _usecase('16', CurrencyTypeEnum.brl);
 
       // assert
@@ -103,7 +105,7 @@ void main() {
                 euroValue: 8,
               ));
 
-      //acte
+      //act
       final result = _usecase('', CurrencyTypeEnum.brl);
 
       // assert
